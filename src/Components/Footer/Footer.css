@@ -1,0 +1,26 @@
+.footer-section {
+  background-color: #efefef;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.footer-item {
+  padding: 4px 0;
+  font-size: 0.6em;
+  font-weight: 400;
+}
+.footer-item:hover {
+  cursor: pointer;
+  color: #6fb3dd;
+}
+
+.footer-heading {
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 0;
+  margin: 10px 0;
+}

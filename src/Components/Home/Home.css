@@ -1,0 +1,30 @@
+.home-section {
+  background-color: #fff;
+  height: 92vh;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  font-size: 1.8rem;
+  top: 0;
+  background: linear-gradient(-10deg, #fff 40%, #121212 25%);
+}
+
+.aeolusLogo {
+  max-width: 90vw;
+  filter: drop-shadow(1px 2px 4px);
+}
+
+.home-caption {
+  font-size: 1em;
+  margin-top: -20px;
+}
+
+@media screen and (min-width: 600px) {
+  .aeolusLogo {
+    height: 80vh;
+  }
+}

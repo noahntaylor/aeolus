@@ -1,0 +1,41 @@
+.contact-section {
+  background-color: #121212f1;
+  padding: 30px 30px;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.contact-heading {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.contact-text {
+  padding: 0 8px;
+  font-size: 0.6em;
+  font-weight: 300;
+}
+
+.contact-input {
+  border-radius: 5px;
+  width: 80%;
+}
+
+.contact-button {
+  background-color: #303030;
+  font-size: 0.6em;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 6px;
+  width: 100px;
+  color: #fff;
+}
+.contact-button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1400px) {
+  .contact-section {
+    padding: 30px calc(10vw + 30px);
+  }
+}

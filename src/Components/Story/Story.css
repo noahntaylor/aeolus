@@ -1,0 +1,77 @@
+.story-section {
+  background-color: #fff;
+  margin: 0;
+  padding: 30px 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.story-surface-dark {
+  background-color: #121212f1;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.story-surface-blue {
+  background-color: #e5f5ff;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.story-surface-grey {
+  background-color: #ccc;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.story-heading {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.story-heading-closer {
+  margin-bottom: -10px;
+}
+
+.story-text {
+  padding: 0 8px;
+  font-size: 0.6em;
+  font-weight: 300;
+}
+
+.story-img-news {
+  height: 40px;
+}
+
+@media screen and (min-width: 1400px) {
+  .story-section {
+    padding: 30px 0;
+    margin: 0 10vw;
+  }
+}
