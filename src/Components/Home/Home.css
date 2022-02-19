@@ -20,7 +20,7 @@
 }
 
 .home-caption {
-  font-size: 1em;
+  font-size: 40px;
   margin-top: -20px;
 }
 
@@ -29,26 +29,15 @@
   padding: 20px 25px;
   color: #fff;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 0.6em;
   font-weight: 300;
   text-align: start;
   max-width: 450px;
 }
 
-.heartbeat {
-  margin-left: 40vw;
-  margin-top: -310px;
-  height: 350px;
-  width: 90vw;
-  transform: scale(0.3);
-  background-repeat: repeat-x;
-  background-image: url(http://localhost:3000/static/media/heartbeat.09faf9b242dedae1eeef.png);
-  color: #fff;
-}
-
 @media screen and (max-width: 500px) {
-  .home-descript {
-    display: none;
+  .home-caption {
+    color: #ccc;
   }
 }
 @media screen and (min-width: 600px) {

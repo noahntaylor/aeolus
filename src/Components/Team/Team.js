@@ -1,22 +1,43 @@
 import React from "react";
+import katieProfilePic from "./Images/katie.jpeg";
 
 import "./Team.css";
 
 function Team() {
   return (
-    <div id="team" className="product-section">
-      <div>
-        <h2 className="product-heading">Team</h2>
-        <p className="product-text">
-          Aeolus has developed a robust and portable ventilator for use in
-          developing countries. Katie Stone, 22, won the Genesis Centre's Pitch
-          and Pick competition with the Aeolus Portable Ventilation System, a
-          prototype that will hopefully provide a cost-effective alternative to
-          traditional COVID-19 ventilators. She said the project started as a
-          capstone design project for her degree, along with work from partners
-          Desiree Van Heerden and Rachel Tobin, but Stone decided to keep
-          working on the project herself after graduation.
-        </p>
+    <div id="team" className="team-section">
+      <h2 className="team-heading">The Aeolus Team</h2>
+      <div className="team-members-container">
+        <div className="team-member-container">
+          <img className="team-member-img" src={katieProfilePic} alt="" />
+          <h3 className="team-name">Katie Stone</h3>
+          <p className="team-text">
+            Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition
+            with the Aeolus Portable Ventilation System, a prototype that will
+            hopefully provide a cost-effective alternative to traditional
+            COVID-19 ventilators.
+          </p>
+        </div>
+        <div className="team-member-container">
+          <img className="team-member-img" src={katieProfilePic} alt="" />
+          <h3 className="team-name">Katie Stone</h3>
+          <p className="team-text">
+            Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition
+            with the Aeolus Portable Ventilation System, a prototype that will
+            hopefully provide a cost-effective alternative to traditional
+            COVID-19 ventilators.
+          </p>
+        </div>
+        <div className="team-member-container">
+          <img className="team-member-img" src={katieProfilePic} alt="" />
+          <h3 className="team-name">Katie Stone</h3>
+          <p className="team-text">
+            Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition
+            with the Aeolus Portable Ventilation System, a prototype that will
+            hopefully provide a cost-effective alternative to traditional
+            COVID-19 ventilators.
+          </p>
+        </div>
       </div>
     </div>
   );

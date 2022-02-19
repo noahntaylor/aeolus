@@ -1,43 +1,36 @@
-.product-section {
-  background-color: #121212f1;
-  margin: 30px 4vw;
-  border-radius: 10px;
+.news-section {
+  background-color: #fff;
+  padding: 8vw;
+  margin: 0;
   padding: 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  color: #fff;
+  text-align: left;
+  color: #000;
   font-size: 1.8rem;
 }
 
-.product-img {
-  height: 200px;
-  padding: 10px;
+.news-heading {
+  text-align: center;
 }
 
-.product-heading {
-  padding: 0;
-  margin: 10px 0;
-}
-
-.product-text {
-  padding: 0 8px;
-  font-size: 0.6em;
-  font-weight: 300;
-}
-
-@media screen and (min-width: 1000px) {
-  .product-section {
-    flex-direction: row;
-    padding: 30px 100px;
+@media screen and (min-width: 500px) {
+  .news-section {
+    padding: 0 8vw;
+    padding-bottom: 100px;
   }
-  .product-img {
-    height: 400px;
+}
+@media screen and (min-width: 1000px) {
+  .news-section {
+    flex-direction: row;
+    padding: 30px 8vw;
+    padding-bottom: 80px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .product-section {
-    margin: 0 10vw;
+  .news-section {
+    padding: 30px 10vw;
+    padding-bottom: 80px;
   }
 }

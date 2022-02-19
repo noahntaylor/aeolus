@@ -4,9 +4,9 @@ import "./News.css";
 
 function News() {
   return (
-    <div id="news" className="product-section">
+    <div id="news" className="news-section">
       <div>
-        <h2 className="product-heading">News</h2>
+        <h2 className="news-heading">News</h2>
         <p className="product-text">
           Aeolus has developed a robust and portable ventilator for use in
           developing countries. Katie Stone, 22, won the Genesis Centre's Pitch
