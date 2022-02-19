@@ -15,16 +15,51 @@
 
 .aeolusLogo {
   max-width: 90vw;
+  max-height: 70vh;
   filter: drop-shadow(1px 2px 4px);
 }
 
 .home-caption {
-  font-size: 1em;
+  font-size: 40px;
   margin-top: -20px;
 }
 
+.home-descript {
+  background-color: #222222fa;
+  padding: 20px 25px;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.6em;
+  font-weight: 300;
+  text-align: start;
+  max-width: 450px;
+}
+
+@media screen and (max-width: 500px) {
+  .home-caption {
+    color: #ccc;
+  }
+}
 @media screen and (min-width: 600px) {
   .aeolusLogo {
-    height: 80vh;
+    max-height: 70vh;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .aeolusLogo {
+    max-height: 75vh;
+  }
+  .home-section {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 8vw;
+  }
+  .home-caption {
+    font-size: 60px;
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+    max-width: 250px;
+    color: #fff;
   }
 }
