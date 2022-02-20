@@ -1,10 +1,10 @@
 .footer-section {
-  background-color: #efefef;
+  background-color: #121212;
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: #000;
+  color: #fff;
   font-size: 1.8rem;
 }
 
