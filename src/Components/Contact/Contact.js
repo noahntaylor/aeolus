@@ -1,14 +1,21 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Contact.css";
 
 function Contact() {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log("refresh prevented");
+  };
+
   return (
     <div id="contact" className="contact">
       <div className="contact-outside-heading">
-        <h2 className="contact-heading">Want to learn more?</h2>
-        <h3 className="contact-heading">Get in touch!</h3>
+        <h2 className="contact-outside-heading-text">Want to learn more?</h2>
+        <h3 className="contact-outside-text">Get in touch!</h3>
       </div>
-      <form className="contact-section" action="">
+      <form className="contact-section" onSubmit={onSubmit}>
         <h2 className="contact-inside-heading">
           Want to learn more? Get in touch!
         </h2>
@@ -48,8 +55,18 @@ function Contact() {
           />
         </div>
         <div className="button-row">
-          <button className="contact-button">Submit</button>
+          <button className="contact-button" onClick={handleClick}>
+            Submit
+          </button>
         </div>
+        {click ? (
+          <div className="contact-submit-message">
+            <p>
+              Thanks for your message! We will get back to you as soon as we
+              can.
+            </p>
+          </div>
+        ) : null}
       </form>
     </div>
   );
