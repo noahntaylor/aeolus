@@ -7,7 +7,7 @@
 }
 
 .product-section {
-  background-color: #121212f1;
+  background-color: #222222fa;
   margin-left: 4vw;
   border-radius: 10px;
   padding: 30px 30px;
@@ -65,7 +65,7 @@
 }
 @media screen and (min-width: 1400px) {
   .product {
-    margin: 0 6vw;
+    margin: 0 8vw;
   }
   .product-section {
     max-width: 45vw;
