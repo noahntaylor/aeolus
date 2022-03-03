@@ -1,8 +1,6 @@
 .news-section {
   background-color: #fff;
-  padding: 8vw;
   margin: 0;
-  padding: 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,53 +13,93 @@
   text-align: center;
 }
 
-.arrow {
-  background-color: #1212126c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
+.news-text {
+  padding: 0 8px;
+  font-size: 0.6em;
+  font-weight: 300;
 }
 
-.mask {
-  z-index: 100;
-  background-color: #fff;
-  color: #fff;
-  width: 100%;
+.news-subheading {
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.news-subheading-read-more {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.news-img {
+  height: 35px;
 }
 
 .news-articles {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  position: relative;
+  width: 100vw;
+  max-width: 800px;
+  margin: 80px 0;
 }
 
 .news-article-container {
-  display: inline-block;
-  border: 2px solid #000;
+  width: 65vw;
+  max-width: 700px;
+  padding: 0 60px;
+  font-size: 28px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.news-opener-wrapper {
+  background-color: #121212;
+  margin-top: -32px;
+}
+
+.news-opener {
+  background-color: #e5f5ff;
+  transform: translateY(60px);
   border-radius: 10px;
-  width: 300px;
-  padding: 20px 30px;
-  font-size: 20px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
 }
 
 @media screen and (min-width: 500px) {
-  .news-section {
-    padding: 0 8vw;
+  .news-opener {
+    margin: 0 8vw;
     padding-bottom: 100px;
+  }
+  .news-articles {
+    width: 80vw;
+    max-width: 800px;
+  }
+  .news-article-container {
+    width: 70vw;
+    max-width: 700px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .news-section {
-    padding: 30px 8vw;
+  .news-opener {
+    margin: 30px 8vw;
     padding-bottom: 80px;
+  }
+  .news-articles {
+    width: 70vw;
+    max-width: 800px;
+  }
+  .news-article-container {
+    width: 60vw;
+    max-width: 700px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .news-section {
-    padding: 30px 10vw;
+  .news-opener {
+    margin: 30px 10vw;
     padding-bottom: 80px;
   }
 }

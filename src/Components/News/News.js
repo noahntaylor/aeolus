@@ -1,85 +1,81 @@
 import React from "react";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Carousel from "react-material-ui-carousel";
+import cbcLogo from "./Images/cbc.png";
+import torontoStarLogo from "./Images/toronto-star.svg";
+import gazetteLogo from "./Images/gazette.png";
+import entrevestorLogo from "./Images/entrevestor.png";
 import "./News.css";
 
 function News() {
-  // TODO: Refactor this later do get font-awesome icons more efficiently
-  const leftArrow = (
-    <FontAwesomeIcon className="menu-icon" icon={faAngleLeft} size="lg" />
-  );
-  const rightArrow = (
-    <FontAwesomeIcon className="menu-icon" icon={faAngleRight} size="lg" />
-  );
-
-  // TODO: Properties for translation. Confirm best practice for react properties
-  var amount = 400;
-  var initial = 0;
-
-  const translateRight = () => {
-    initial += amount;
-    document.getElementById("container").style.transform =
-      "translateX(" + initial + "px)";
-  };
-
-  const translateLeft = () => {
-    initial -= amount;
-    document.getElementById("container").style.transform =
-      "translateX(" + initial + "px)";
-  };
+  const articles = [
+    {
+      link: "https://www.cbc.ca/news/canada/newfoundland-labrador/katie-stone-aeolus-ventilator-genesis-1.6148741",
+      image: cbcLogo,
+      title:
+        "St. John's engineer designs ventilator to help developing countries battle COVID-19",
+      text: "A St. John's electrical engineer has created a ventilator to help developing countries fight severe cases of COVID-19, taking top prize in a Memorial University competition for her work. Katie Stone, 22, won the Genesis...",
+    },
+    {
+      link: "https://www.thestar.com/news/canada/2021/08/23/have-ventilator-will-travel.html",
+      image: torontoStarLogo,
+      title: "Have ventilator, will travel",
+      text: "Katie Stone’s Aeolus ventilator may have started out as a school project, but she’s determined to take it as far as it will go as a marketable, affordable medical device. In fact, Stone feels it might perfectly fit the bill for developing countries that are crying out for ventilators, but can’t afford them. The Aeolus started as a group...",
+    },
+    {
+      link: "https://gazette.mun.ca/student-life/breathe-easy/",
+      image: gazetteLogo,
+      title: "Breathe easy",
+      text: "A Faculty of Engineering and Applied Science alumna took home first place honours in Genesis’ summer 2021 Pitch and Pick competition. Katie Stone (B.Eng.’21) won for her pneumatic ventilator system, Aeolus. Early stage tech startups Taking place three times a year, the competition is part of Evolution, Genesis’ pre-incubator program....",
+    },
+    {
+      link: "https://entrevestor.com/home/entry/aeolus-wins-pitch-pick",
+      image: entrevestorLogo,
+      title: "Aeolus Wins Pitch & Pick",
+      text: "Aeolus, the Newfoundland and Labrador-based maker of portable ventilators, has won startup hub Genesis’s Pitch & Pick competition, as well as the event’s Community Choice Award for its coronavirus-inspired technology. The company is building a ventilator system powered by a pneumatic pump and small enough to carry. The product is...",
+    },
+  ];
 
   return (
     <div id="news" className="news-section">
-      <div className="news-opener">
-        <h2 className="news-heading">News</h2>
-        <p className="product-text">
-          Aeolus has developed a robust and portable ventilator for use in
-          developing countries. Katie Stone, 22, won the Genesis Centre's Pitch
-          and Pick competition with the Aeolus Portable Ventilation System, a
-          prototype that will hopefully provide a cost-effective alternative to
-          traditional COVID-19 ventilators.
-        </p>
-      </div>
-      <div className="news-articles">
-        <div className="mask"></div>
-        <button className="arrow" onClick={translateLeft}>
-          {leftArrow}
-        </button>
-        <div id="container">
-          <div className="news-article-container">
-            <p className="product-text">
-              Aeolus has developed a robust and portable ventilator for use in
-              developing countries. Katie Stone, 22, won the Genesis Centre's
-              Pitch and Pick competition with the Aeolus Portable Ventilation
-              System, a prototype that will hopefully provide a cost-effective
-              alternative to traditional COVID-19 ventilators.
-            </p>
-          </div>
-          <div className="news-article-container">
-            <p className="product-text">
-              Aeolus has developed a robust and portable ventilator for use in
-              developing countries. Katie Stone, 22, won the Genesis Centre's
-              Pitch and Pick competition with the Aeolus Portable Ventilation
-              System, a prototype that will hopefully provide a cost-effective
-              alternative to traditional COVID-19 ventilators.
-            </p>
-          </div>
-          <div className="news-article-container">
-            <p className="product-text">
-              Aeolus has developed a robust and portable ventilator for use in
-              developing countries. Katie Stone, 22, won the Genesis Centre's
-              Pitch and Pick competition with the Aeolus Portable Ventilation
-              System, a prototype that will hopefully provide a cost-effective
-              alternative to traditional COVID-19 ventilators.
-            </p>
-          </div>
+      <div className="news-opener-wrapper">
+        <div className="news-opener">
+          <h2 className="news-heading">News</h2>
+          <p className="news-text">
+            Aeolus has developed a robust and portable ventilator for use in
+            developing countries. Katie Stone, 22, won the Genesis Centre's
+            Pitch and Pick competition with the Aeolus Portable Ventilation
+            System, a prototype that will hopefully provide a cost-effective
+            alternative to traditional COVID-19 ventilators. Katie Stone, 22,
+            won the Genesis Centre's Pitch and Pick competition with the Aeolus
+            Portable Ventilation System, a prototype that will hopefully provide
+            a cost-effective alternative to traditional COVID-19 ventilators.
+          </p>
         </div>
-        <button className="arrow" onClick={translateRight}>
-          {rightArrow}
-        </button>
-        <div className="mask">Mask</div>
       </div>
+      <Carousel
+        navButtonsAlwaysVisible="true"
+        autoPlay="false"
+        cycleNavigation="false"
+        fullHeightHover="false"
+        className="news-articles"
+      >
+        {articles.map((article, i) => (
+          <Item key={i} item={article} />
+        ))}
+      </Carousel>
+    </div>
+  );
+}
+
+function Item(props) {
+  return (
+    <div className="news-article-container">
+      <img className="news-img" src={props.item.image} alt="" />
+      <h2 className="news-subheading">{props.item.title}</h2>
+      <p className="news-text">{props.item.text}</p>
+      <a href={props.item.link} className="news-subheading-read-more">
+        Read more
+      </a>
     </div>
   );
 }
