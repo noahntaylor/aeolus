@@ -1,5 +1,5 @@
 .story-section {
-  background: linear-gradient(10deg, #121212 48%, #fff 20%);
+  background: linear-gradient(0deg, #121212 45%, #fff 20%);
   margin: 0;
   padding: 30px 4vw;
   display: flex;
@@ -9,6 +9,7 @@
   text-align: left;
   color: #000;
   font-size: 1.8rem;
+  padding-bottom: 60px;
 }
 
 .story-surface-dark {
@@ -73,12 +74,13 @@
 .story-clear-bg {
   padding: 0 30px;
   padding-top: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 @media screen and (min-width: 500px) {
   .story-section {
     padding: 0 8vw;
+    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -87,6 +89,7 @@
     background: linear-gradient(10deg, #121212 64%, #fff 20%);
     padding: 30px 8vw;
     color: #fff;
+    padding-bottom: 60px;
   }
   .story-clear-bg {
     min-width: 25vw;
@@ -100,5 +103,6 @@
     margin-top: -100px;
     padding-top: 100px;
     padding: 100px 10vw;
+    padding-bottom: 60px;
   }
 }

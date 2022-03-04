@@ -60,14 +60,14 @@ function News() {
         className="news-articles"
       >
         {articles.map((article, i) => (
-          <Item key={i} item={article} />
+          <Article key={i} item={article} />
         ))}
       </Carousel>
     </div>
   );
 }
 
-function Item(props) {
+function Article(props) {
   return (
     <div className="news-article-container">
       <img className="news-img" src={props.item.image} alt="" />

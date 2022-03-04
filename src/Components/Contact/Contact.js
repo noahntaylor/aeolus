@@ -6,7 +6,6 @@ function Contact() {
   const handleClick = () => setClick(!click);
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("refresh prevented");
   };
 
   return (
