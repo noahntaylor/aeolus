@@ -9,7 +9,7 @@ function Home() {
         <div>
           <img className="aeolusLogo" src={aeolusLogo} alt="" />
         </div>
-        <div>
+        <div class="home-text">
           <h2 className="home-caption">Breathe Easy.</h2>
           <p className="home-descript">
             Aeolus provides robust and one-of a kind solutions to global

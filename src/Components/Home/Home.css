@@ -10,7 +10,7 @@
   color: #000;
   font-size: 1.8rem;
   top: 0;
-  background: linear-gradient(-10deg, #fff 40%, #121212 25%);
+  background: linear-gradient(-10deg, #fff 50%, #121212 25%);
 }
 
 .aeolusLogo {
@@ -21,26 +21,39 @@
 
 .home-caption {
   font-size: 40px;
-  margin-top: -20px;
+  color: #000;
+  margin: 0 5px;
 }
 
 .home-descript {
-  background-color: #222222fa;
-  padding: 20px 25px;
-  color: #fff;
+  color: #000;
   border-radius: 10px;
   font-size: 0.6em;
   font-weight: 300;
   text-align: start;
-  max-width: 450px;
+  max-width: 300px;
 }
 
-@media screen and (max-width: 500px) {
-  .home-caption {
-    color: #ccc;
+.home-text {
+  border-radius: 10px;
+  padding: 30px 30px;
+}
+
+@media screen and (max-width: 400px) {
+  .home-section {
+    background: linear-gradient(-10deg, #fff 58%, #121212 25%);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .home-text {
+    background: none;
   }
 }
 @media screen and (min-width: 600px) {
+  .home-section {
+    background: linear-gradient(-10deg, #fff 40%, #121212 25%);
+  }
   .aeolusLogo {
     max-height: 70vh;
   }
@@ -61,5 +74,10 @@
     text-align: left;
     max-width: 250px;
     color: #fff;
+  }
+  .home-descript {
+    background-color: #222222fa;
+    color: #fff;
+    padding: 30px 35px;
   }
 }

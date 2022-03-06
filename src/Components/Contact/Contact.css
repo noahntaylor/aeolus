@@ -27,6 +27,13 @@
   text-align: center;
 }
 
+.contact-message-heading {
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
 .contact-input {
   border-radius: 5px;
   width: 100%;
@@ -119,17 +126,11 @@
   width: 100%;
   padding: 0;
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 
-.contact-submit-message {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  background-color: #222222fa;
-  width: 42vw;
-  min-height: 40vh;
+#name {
+  font-family: inherit;
 }
 
 @media screen and (min-width: 500px) {
@@ -141,6 +142,9 @@
   }
   .contact-input {
     width: 55%;
+  }
+  .contact-inside-heading {
+    text-align: center;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -164,6 +168,9 @@
   }
   .contact-inside-heading {
     display: none;
+  }
+  .contact-submit-message {
+    min-height: 30vh;
   }
 }
 @media screen and (min-width: 1400px) {
