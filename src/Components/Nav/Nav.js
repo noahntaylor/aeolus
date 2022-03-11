@@ -5,13 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Nav.css";
 
 function Nav() {
-  // Refactor this later do get font-awesome icons more efficiently
   const menuIcon = (
     <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
   );
   const closeMenuIcon = (
     <FontAwesomeIcon className="menu-icon" icon={faTimes} size="lg" />
   );
+  const heading = "Aeolus";
+
+  const homeLabel = "Home";
+  const productLabel = "Product";
+  const storyLabel = "Story";
+  const teamLabel = "Team";
+  const newsLabel = "News";
+  const contactLabel = "Contact";
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -28,7 +35,7 @@ function Nav() {
             smooth={true}
             onClick={closeMenu}
           >
-            Aeolus
+            {heading}
           </Link>
         </div>
         <div className="menu-icon" onClick={handleClick}>
@@ -48,7 +55,7 @@ function Nav() {
                     smooth={true}
                     onClick={closeMenu}
                   >
-                    Home
+                    {homeLabel}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -59,7 +66,7 @@ function Nav() {
                     smooth={true}
                     onClick={closeMenu}
                   >
-                    Product
+                    {productLabel}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -70,7 +77,7 @@ function Nav() {
                     smooth={true}
                     onClick={closeMenu}
                   >
-                    Story
+                    {storyLabel}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -81,7 +88,7 @@ function Nav() {
                     smooth={true}
                     onClick={closeMenu}
                   >
-                    Team
+                    {teamLabel}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -92,7 +99,7 @@ function Nav() {
                     smooth={true}
                     onClick={closeMenu}
                   >
-                    News
+                    {newsLabel}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -103,7 +110,7 @@ function Nav() {
                     smooth={true}
                     onClick={closeMenu}
                   >
-                    Contact
+                    {contactLabel}
                   </Link>
                 </li>
               </ul>
@@ -115,5 +122,17 @@ function Nav() {
     </div>
   );
 }
+
+// TODO: Move nav menu over to this component!
+const NavMenu = (props) => {
+  const homeLabel = "Home";
+  const productLabel = "Product";
+  const storyLabel = "Story";
+  const teamLabel = "Team";
+  const newsLabel = "News";
+  const contactLabel = "Contact";
+
+  return <div></div>;
+};
 
 export default Nav;

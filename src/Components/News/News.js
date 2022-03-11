@@ -6,7 +6,10 @@ import gazetteLogo from "./Images/gazette.png";
 import entrevestorLogo from "./Images/entrevestor.png";
 import "./News.css";
 
-function News() {
+const News = () => {
+  const newsOpenerText =
+    "Aeolus has developed a robust and portable ventilator for use in developing countries. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators.";
+  const newHeading = "News";
   const articles = [
     {
       link: "https://www.cbc.ca/news/canada/newfoundland-labrador/katie-stone-aeolus-ventilator-genesis-1.6148741",
@@ -39,17 +42,8 @@ function News() {
     <div id="news" className="news-section">
       <div className="news-opener-wrapper">
         <div className="news-opener">
-          <h2 className="news-heading">News</h2>
-          <p className="news-text">
-            Aeolus has developed a robust and portable ventilator for use in
-            developing countries. Katie Stone, 22, won the Genesis Centre's
-            Pitch and Pick competition with the Aeolus Portable Ventilation
-            System, a prototype that will hopefully provide a cost-effective
-            alternative to traditional COVID-19 ventilators. Katie Stone, 22,
-            won the Genesis Centre's Pitch and Pick competition with the Aeolus
-            Portable Ventilation System, a prototype that will hopefully provide
-            a cost-effective alternative to traditional COVID-19 ventilators.
-          </p>
+          <h2 className="news-heading">{newHeading}</h2>
+          <p className="news-text">{newsOpenerText}</p>
         </div>
       </div>
       <Carousel
@@ -65,19 +59,21 @@ function News() {
       </Carousel>
     </div>
   );
-}
+};
 
-function Article(props) {
+const Article = ({ item }) => {
+  const readMoreText = "Read more";
+
   return (
     <div className="news-article-container">
-      <img className="news-img" src={props.item.image} alt="" />
-      <h2 className="news-subheading">{props.item.title}</h2>
-      <p className="news-text">{props.item.text}</p>
-      <a href={props.item.link} className="news-subheading-read-more">
-        Read more
+      <img className="news-img" src={item.image} alt="" />
+      <h2 className="news-subheading">{item.title}</h2>
+      <p className="news-text">{item.text}</p>
+      <a href={item.link} className="news-subheading-read-more">
+        {readMoreText}
       </a>
     </div>
   );
-}
+};
 
 export default News;
