@@ -3,7 +3,7 @@ import katieProfilePic from "./Images/katie.jpeg";
 import { TeamMember } from "./TeamMember";
 import "./Team.css";
 
-const Team = () => {
+function Team() {
   const teamMembers = [
     new TeamMember(
       "Katie Stone",
@@ -32,9 +32,9 @@ const Team = () => {
       </div>
     </div>
   );
-};
+}
 
-const TeamMemberSection = ({ teamMember }) => {
+function TeamMemberSection({ teamMember }) {
   return (
     <div className="team-member-container">
       <img className="team-member-img" src={teamMember.picture} alt="" />
@@ -42,6 +42,6 @@ const TeamMemberSection = ({ teamMember }) => {
       <p className="team-text">{teamMember.bio}</p>
     </div>
   );
-};
+}
 
 export default Team;

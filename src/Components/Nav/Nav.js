@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Nav.css";
@@ -21,13 +21,7 @@ function Nav() {
     <div id="nav" className="nav">
       <div className="nav-container">
         <div className="logo">
-          <Link
-            to="home"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            onClick={changeShowMenu}
-          >
+          <Link to="/" onClick={closeMenu}>
             {heading}
           </Link>
         </div>
@@ -40,12 +34,9 @@ function Nav() {
   );
 }
 
-const NavMenu = (props) => {
+function NavMenu(props) {
   const homeLabel = "Home";
-  const productLabel = "Product";
-  const storyLabel = "Story";
-  const teamLabel = "Team";
-  const newsLabel = "News";
+  const aboutLabel = "About";
   const contactLabel = "Contact";
 
   if (props.showMenu) {
@@ -54,68 +45,17 @@ const NavMenu = (props) => {
         <div className="nav-menu">
           <ul>
             <li className="nav-item">
-              <Link
-                to="home"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                onClick={props.onCloseMenu}
-              >
+              <Link to="/" onClick={props.onCloseMenu}>
                 {homeLabel}
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="product"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                onClick={props.onCloseMenu}
-              >
-                {productLabel}
+              <Link to="About" onClick={props.onCloseMenu}>
+                {aboutLabel}
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="story"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                onClick={props.onCloseMenu}
-              >
-                {storyLabel}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="team"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                onClick={props.onCloseMenu}
-              >
-                {teamLabel}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="news"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                onClick={props.onCloseMenu}
-              >
-                {newsLabel}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="contact"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                onClick={props.onCloseMenu}
-              >
+              <Link to="Contact" onClick={props.onCloseMenu}>
                 {contactLabel}
               </Link>
             </li>
@@ -127,6 +67,6 @@ const NavMenu = (props) => {
   } else {
     return null;
   }
-};
+}
 
 export default Nav;

@@ -1,43 +1,32 @@
 import { React } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import aeolusLogo from "./Images/aeolus.png";
-
 import "./Footer.css";
 
 function Footer() {
+  const aboutLabel = "About";
+  const contactLabel = "Contact";
+  const copyText = "\u00A9 Aeolus 2022";
+
   return (
     <div id="footer" className="footer-section">
       <div className="footer-main">
         <div className="footer-item">
-          <Link to="home" activeClass="active" spy={true} smooth={true}>
+          <Link to="/">
             <img src={aeolusLogo} className="footer-img" alt="" />
           </Link>
         </div>
         <ul className="footer-links-container">
           <li className="footer-item">
-            <Link to="product" activeClass="active" spy={true} smooth={true}>
-              Product
-            </Link>
+            <Link to="About">{aboutLabel}</Link>
           </li>
           <li className="footer-item">
-            <Link to="story" activeClass="active" spy={true} smooth={true}>
-              Story
-            </Link>
-          </li>
-          <li className="footer-item">
-            <Link to="team" activeClass="active" spy={true} smooth={true}>
-              Team
-            </Link>
-          </li>
-          <li className="footer-item">
-            <Link to="news" activeClass="active" spy={true} smooth={true}>
-              News
-            </Link>
+            <Link to="Contact">{contactLabel}</Link>
           </li>
         </ul>
       </div>
       <div>
-        <p className="footer-copyright">&copy; Aeolus 2022</p>
+        <p className="footer-copyright">{copyText}</p>
       </div>
     </div>
   );

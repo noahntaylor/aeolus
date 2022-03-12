@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import "./Contact.css";
 
-const Contact = () => {
+function Contact() {
   const learnMoreText = "Want to learn more?";
   const getInTouchText = "Get in touch!";
 
@@ -19,9 +19,9 @@ const Contact = () => {
       <ContactForm submit={submit} onChangeSubmit={handleSubmit} />
     </div>
   );
-};
+}
 
-const ContactForm = (props) => {
+function ContactForm(props) {
   const contactHeading = "Want to learn more? Get in touch!";
   const nameLabel = "Your Name:";
   const namePlaceholder = "Your Name";
@@ -91,6 +91,6 @@ const ContactForm = (props) => {
       </form>
     );
   }
-};
+}
 
 export default Contact;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Story.css";
 
-const Story = () => {
+function Story() {
   const firstStoryHeading = "Our Story";
   const firstStoryParagraph =
     "Aeolus is currently completing the Genesis Evolution Plus program with the Genesis center for Entrepreneurship. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided to keep working on the project herself after graduation. ";
@@ -21,6 +21,6 @@ const Story = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Story;

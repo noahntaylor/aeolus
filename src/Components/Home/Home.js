@@ -2,7 +2,7 @@ import React from "react";
 import aeolusLogo from "./Images/aeolus.png";
 import "./Home.css";
 
-const Home = () => {
+function Home() {
   const homeParagraphText =
     "Aeolus provides robust and one-of a kind solutions to global problems. Innovation, at a fair and global price. The health equality gap became even more apparent during hte pandemic and Aeolus is here to adress it.";
   const aeolusCaption = "Breathe Easy.";
@@ -20,6 +20,6 @@ const Home = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;

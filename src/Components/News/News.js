@@ -6,7 +6,7 @@ import gazetteLogo from "./Images/gazette.png";
 import entrevestorLogo from "./Images/entrevestor.png";
 import "./News.css";
 
-const News = () => {
+function News() {
   const newsOpenerText =
     "Aeolus has developed a robust and portable ventilator for use in developing countries. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators.";
   const newHeading = "News";
@@ -59,9 +59,9 @@ const News = () => {
       </Carousel>
     </div>
   );
-};
+}
 
-const Article = ({ item }) => {
+function Article({ item }) {
   const readMoreText = "Read more";
 
   return (
@@ -74,6 +74,6 @@ const Article = ({ item }) => {
       </a>
     </div>
   );
-};
+}
 
 export default News;
