@@ -44,7 +44,6 @@
     background: linear-gradient(-10deg, #fff 58%, #121212 25%);
   }
 }
-
 @media screen and (min-width: 500px) {
   .home-text {
     background: none;

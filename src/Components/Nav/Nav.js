@@ -1,119 +1,72 @@
 import { React, useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Nav.css";
 
 function Nav() {
-  // Refactor this later do get font-awesome icons more efficiently
   const menuIcon = (
     <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
   );
   const closeMenuIcon = (
     <FontAwesomeIcon className="menu-icon" icon={faTimes} size="lg" />
   );
+  const heading = "Aeolus";
 
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-  const closeMenu = () => setClick(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const changeShowMenu = () => setShowMenu(!showMenu);
+  const closeMenu = () => setShowMenu(false);
 
   return (
     <div id="nav" className="nav">
       <div className="nav-container">
         <div className="logo">
-          <Link
-            to="home"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            onClick={closeMenu}
-          >
-            Aeolus
+          <Link to="/" onClick={closeMenu}>
+            {heading}
           </Link>
         </div>
-        <div className="menu-icon" onClick={handleClick}>
-          {click ? closeMenuIcon : menuIcon}
+        <div className="menu-icon" onClick={changeShowMenu}>
+          {showMenu ? closeMenuIcon : menuIcon}
         </div>
       </div>
-      <div>
-        {click ? (
-          <div>
-            <div className="nav-menu">
-              <ul>
-                <li className="nav-item">
-                  <Link
-                    to="home"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    onClick={closeMenu}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="product"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    onClick={closeMenu}
-                  >
-                    Product
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="story"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    onClick={closeMenu}
-                  >
-                    Story
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="team"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    onClick={closeMenu}
-                  >
-                    Team
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="news"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    onClick={closeMenu}
-                  >
-                    News
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="contact"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    onClick={closeMenu}
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="nav-menu-blur" onClick={closeMenu}></div>
-          </div>
-        ) : null}
-      </div>
+      <NavMenu showMenu={showMenu} onCloseMenu={closeMenu} />
     </div>
   );
+}
+
+function NavMenu(props) {
+  const homeLabel = "Home";
+  const aboutLabel = "About";
+  const contactLabel = "Contact";
+
+  if (props.showMenu) {
+    return (
+      <div>
+        <div className="nav-menu">
+          <ul>
+            <li className="nav-item">
+              <Link to="/" onClick={props.onCloseMenu}>
+                {homeLabel}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="About" onClick={props.onCloseMenu}>
+                {aboutLabel}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="Contact" onClick={props.onCloseMenu}>
+                {contactLabel}
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="nav-menu-blur" onClick={props.onCloseMenu}></div>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
 
 export default Nav;
