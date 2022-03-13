@@ -4,6 +4,7 @@ import aeolusLogo from "./Images/aeolus.png";
 import "./Footer.css";
 
 function Footer() {
+  const homeLabel = "Home";
   const aboutLabel = "About";
   const contactLabel = "Contact";
   const copyText = "\u00A9 Aeolus 2022";
@@ -17,6 +18,9 @@ function Footer() {
           </Link>
         </div>
         <ul className="footer-links-container">
+          <li className="footer-item">
+            <Link to="/">{homeLabel}</Link>
+          </li>
           <li className="footer-item">
             <Link to="About">{aboutLabel}</Link>
           </li>

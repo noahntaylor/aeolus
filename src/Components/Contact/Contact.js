@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import "./Contact.css";
 
 function Contact() {
@@ -28,13 +28,54 @@ function ContactForm(props) {
   const emailLabel = "Your Email:";
   const emailPlaceholder = "Your Email";
   const messageLabel = "What would you like to say?";
-  const messagePlaceholder = "Your Message...";
+  const messagePlaceholder = "";
   const submitHeader = "Thanks for your message!";
   const submitText = "We will get back to you as soon as we can.";
   const submitButtonLabel = "Submit";
 
-  const onSubmit = (e) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onNameChange = (event) => {
+    setName(event.target.value);
+  };
+  const onEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+  const onMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+    if (name.length === 0) {
+      alert("Name is required.");
+    } else if (email.length === 0) {
+      alert("Email is required.");
+    } else if (message.length === 0) {
+      alert("Message is required.");
+    } else {
+      props.onChangeSubmit();
+
+      let details = {
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      let response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+      });
+
+      let result = await response.json();
+      console.log(result.status);
+    }
   };
 
   if (props.submit) {
@@ -58,6 +99,8 @@ function ContactForm(props) {
               type="text"
               placeholder={namePlaceholder}
               className="contact-input"
+              value={name}
+              onChange={onNameChange}
             />
           </div>
           <div className="contact-row">
@@ -65,10 +108,12 @@ function ContactForm(props) {
               {emailLabel}
             </label>
             <input
-              id="name"
+              id="email"
               type="email"
               placeholder={emailPlaceholder}
               className="contact-input"
+              value={email}
+              onChange={onEmailChange}
             />
           </div>
         </div>
@@ -77,14 +122,16 @@ function ContactForm(props) {
             {messageLabel}
           </label>
           <textarea
-            id="name"
+            id="message"
             type="text"
             placeholder={messagePlaceholder}
             className="contact-text-area"
+            value={message}
+            onChange={onMessageChange}
           />
         </div>
         <div className="button-row">
-          <button className="contact-button" onClick={props.onChangeSubmit}>
+          <button className="contact-button" type="button" onClick={onSubmit}>
             {submitButtonLabel}
           </button>
         </div>
