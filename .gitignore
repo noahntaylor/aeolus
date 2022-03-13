@@ -12,12 +12,12 @@
 /build
 
 # firebase
-.firebase
+/.firebase
 .firebaserc
 .firebase.json
 
 #github
-.github
+/.github
 
 # misc
 .DS_Store
