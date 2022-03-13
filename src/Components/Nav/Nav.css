@@ -82,3 +82,8 @@ a:-webkit-any-link:hover {
     width: 70vw;
   }
 }
+@media screen and (min-height: 800px) {
+  .nav-container {
+    height: 6vh;
+  }
+}
