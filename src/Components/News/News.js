@@ -69,7 +69,12 @@ function Article({ item }) {
       <img className="news-img" src={item.image} alt="" />
       <h2 className="news-subheading">{item.title}</h2>
       <p className="news-text">{item.text}</p>
-      <a href={item.link} className="news-subheading-read-more">
+      <a
+        href={item.link}
+        id="read-more"
+        name="read-more"
+        className="news-subheading-read-more"
+      >
         {readMoreText}
       </a>
     </div>

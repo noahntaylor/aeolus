@@ -65,6 +65,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0 8vw;
+    height: 95vh;
   }
   .home-caption {
     font-size: 60px;
