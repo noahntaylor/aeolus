@@ -29,11 +29,16 @@
   margin-top: 15px;
 }
 
-.news-subheading-read-more {
+ .news-subheading-read-more  {
   font-size: 16px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 15px;
+}
+
+#read-more {
+  color: #000;
+  text-decoration: underline;
 }
 
 .news-img {
