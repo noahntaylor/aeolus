@@ -6,11 +6,13 @@ import Footer from "./Components/Footer/Footer";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
+import ScrollToTop from "./Pages/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop></ScrollToTop>
         <Nav></Nav>
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}></Route>
