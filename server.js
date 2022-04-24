@@ -40,7 +40,7 @@ transporter.verify((error) => {
 });
 
 // POST method to send email
-router.post("/contact", (req, res) => {
+router.post("/email", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;

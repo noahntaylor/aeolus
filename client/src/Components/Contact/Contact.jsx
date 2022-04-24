@@ -65,7 +65,7 @@ function ContactForm(props) {
         message: message,
       };
 
-      let response = await fetch("/contact", {
+      let response = await fetch("/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
