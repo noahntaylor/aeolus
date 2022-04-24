@@ -9,10 +9,6 @@ html,
 body,
 div,
 span,
-/* h1,
-h2,
-h3,
-p, */
 footer,
 header,
 menu,
@@ -44,7 +40,6 @@ ul {
 }
 
 /* Beginning of CSS */
-
 body {
   font-family: "Roboto", sans-serif;
 }
