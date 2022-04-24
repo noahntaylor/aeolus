@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 const path = require("path");
 
-require("dotenv").config();
+require("dotenv").config({ path: "./.env" });
 const port = process.env.PORT || 5000;
 
 app.use(cors());
