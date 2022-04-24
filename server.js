@@ -2,14 +2,24 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-require("dotenv").config();
-
-// Set up the server
 const app = express();
+const path = require("path");
+
+require("dotenv").config();
+const port = process.env.PORT || 5000;
+
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log(`Server Running!`));
+
+// Get express to serve client app
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+app.listen(port, () => console.log(`Server Running!`));
 
 // Create transporter to send email with nodemailer
 const transporter = nodemailer.createTransport({
