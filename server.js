@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
-// Get express to serve client app
+// Use express to serve client app
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("*", (req, res) => {

@@ -1,41 +1,32 @@
 import React from "react";
-import ventilator from "./Images/ventilator.png";
+
+import { ProductData } from "../Data";
 import "./Product.css";
 
 function Product() {
-  const productTitle = "The Aeolus Ventilator";
-  const productText =
-    "Aeolus has developed a robust pneumatic and portable ventilator and cost effective ventilator. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided   to keep working on the project herself after graduation.";
-  const secondProductTitle = "More About Product...";
-  const secondProductText =
-    "Aeolus has developed a robust pneumatic and portable ventilator and cost effective ventilator. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided   to keep working on the project herself after graduation.";
-  const thirdProductTitle = "Last About Product...";
-  const thirdProductText =
-    "Aeolus has developed a robust pneumatic and portable ventilator and cost effective ventilator. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided   to keep working on the project herself after graduation.";
-
   return (
     <div id="product" className="product">
       <div className="product-section">
-        <h2 className="product-heading">{productTitle}</h2>
-        <p className="product-text">{productText}</p>
+        <h2 className="product-heading">{ProductData.productTitle}</h2>
+        <p className="product-text">{ProductData.productText}</p>
       </div>
       <div className="product-img-section">
-        <img className="img" src={ventilator} alt="" />
+        <img className="img" src={ProductData.productImage} alt="" />
       </div>
       <div className="product-img-section-right">
-        <img className="img" src={ventilator} alt="" />
+        <img className="img" src={ProductData.secondProductImage} alt="" />
       </div>
       <div className="product-section-right">
-        <h2 className="product-heading">{secondProductTitle}</h2>
-        <p className="product-text">{secondProductText}</p>
+        <h2 className="product-heading">{ProductData.secondProductTitle}</h2>
+        <p className="product-text">{ProductData.secondProductText}</p>
       </div>
-      {/* <div className="product-section">
-        <h2 className="product-heading">{thirdProductTitle}</h2>
-        <p className="product-text">{thirdProductText}</p>
+      <div className="product-section">
+        <h2 className="product-heading">{ProductData.thirdProductTitle}</h2>
+        <p className="product-text">{ProductData.thirdProductText}</p>
       </div>
-      <div className="product-img-section">
-        <img className="img" src={ventilator} alt="" />
-      </div> */}
+      <div className="product-img-section last">
+        <img className="img" src={ProductData.thirdProductImage} alt="" />
+      </div>
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import ScrollToTop from "./Pages/ScrollToTop";
+import "./App.css";
 
 function App() {
   return (
