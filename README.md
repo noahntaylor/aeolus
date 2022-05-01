@@ -1,5 +1,6 @@
-Aeolus 
-Available: aeolus-ventilator.com
+Aeolus
+
+Available: www.aeolus-ventilator.com
 
 Company website for Newfoundland medical technology startup Aeolus.
 
