@@ -57,10 +57,6 @@
   margin-bottom: 100px;
 }
 
-.elevated {
-  z-index: 100;
-}
-
 .img {
   width: 550px;
   max-width: 70vw;

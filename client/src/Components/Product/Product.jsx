@@ -6,7 +6,7 @@ import "./Product.css";
 function Product() {
   return (
     <div id="product" className="product">
-      <div className="product-section elevated">
+      <div className="product-section">
         <h2 className="product-heading">{ProductData.productTitle}</h2>
         <p className="product-text">{ProductData.productText}</p>
       </div>
