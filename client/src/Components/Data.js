@@ -5,7 +5,9 @@ import torontoStarLogo from "./News/Images/toronto-star.svg";
 import gazetteLogo from "./News/Images/gazette.png";
 import entrevestorLogo from "./News/Images/entrevestor.png";
 
-import katieProfilePic from "./Team/Images/katie.jpeg";
+import katieProfilePic from "./Team/Images/katie.jpg";
+import rachelProfilePic from "./Team/Images/rachel.jpg";
+import desireeProfilePic from "./Team/Images/desiree.jpg";
 import { TeamMember } from "./Team/TeamMember";
 
 export const HomeData = {
@@ -24,7 +26,7 @@ export const NavData = {
 export const ProductData = {
   productTitle: "Our Story",
   productText:
-    "The COVID-19 pandemic revealed the stark difference between healthcare equipment and infrastructure in developed and developing countries. There are fewer than 2,000 functional ventilators in 41 African countries, according to the WHO. Health care is a human right and often times solutions are not one size fits all. Aeolus' wishes to develop solutions for problems that may be overlooked.",
+    "The COVID-19 pandemic revealed the stark difference between healthcare equipment and infrastructure in developed and developing countries. There are fewer than 2,000 functional ventilators in 41 African countries, according to the WHO. Health care is a human right and often times solutions are not one size fits all. Aeolus wishes to develop solutions for problems that may be overlooked.",
   productImage: ventilator,
   secondProductTitle: "The Aeolus Ventilator",
   secondProductText:
@@ -32,14 +34,13 @@ export const ProductData = {
   secondProductImage: ventilator,
   thirdProductTitle: "Cost Effective Care",
   thirdProductText:
-    "The average ventilator costs between 25 to 50,000 dollars, a price point that is often unattainable for developing countries. The Aeolus systems plans to create a systems with all essential functionality at a fraction of the cost to provide a much more cost effective way to provide quality care.",
-
+    "The average ventilator costs between 25 to 50,000 dollars, a price point that is often unattainable for developing countries. Aeolus' mission is to create a system with all essential functionality at a fraction of the cost to provide quality care at a much lower price point.",
 };
 
 export const StoryData = {
   firstStoryHeading: "Our Story",
   firstStoryParagraph:
-    "The Aeolus story started in the Team's final year of electrical engineering at Memorial University. We started our senior capstone design project just as the Covid-19 pandemic began. All the headlines focuses on the need for ventilators in the the fight of the virus and there may not be enough in North America. However, the situation in developing countries was much worse.",
+    "The Aeolus story started in the Team's final year of electrical engineering at Memorial University. We started our senior capstone design project just as the Covid-19 pandemic began. All the headlines focused on the need for ventilators in the the fight of the virus and how there may not be enough in North America. However, the situation in developing countries was much worse.",
   secondStoryHeading: "A Global Shortage",
   secondStoryParagraph:
     "South Sudan, a nation of 11 million, has four ventilators. The Central African Republic has three ventilators for its five million people. In Liberia, which is similar in size, there are six working machines — and one of them sits behind the gates of the United States Embassy. Ten countries in Africa have none at all. It is clear that modern day ventilators do not fit into all health care systems across the globe. ",
@@ -47,7 +48,7 @@ export const StoryData = {
 
 export const NewsData = {
   newsOpenerText:
-    "Katie Stone continued with the project post graduation and won the Genesis Centre's Pitch and Pick competition. Aeolus is currently a Bounce partner companies and is excited to be apart of the local MedTech Start-up space in Newfoundland.",
+    "Katie Stone continued with the project post graduation and won the Genesis Centre's Pitch and Pick competition. Aeolus is currently a Bounce partner company and is excited to be a part of the local MedTech Start-up space in Newfoundland and Labrador.",
   newHeading: "News",
   articles: [
     {
@@ -89,13 +90,13 @@ export const TeamData = {
     ),
     new TeamMember(
       "Rachel Tobin",
-      "Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators.",
-      katieProfilePic
+      "Rachel Tobin graduated from Electrical Engineering at Memorial University in 2021. She is currently working as a Product Designer with PolyUnity in St. John's.",
+      rachelProfilePic
     ),
     new TeamMember(
       "Desiree Van Heerden",
-      "Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators.",
-      katieProfilePic
+      "Desiree graduated from Memorial University Electrical Engineering in 2021. Desiree is completing a master's degree in BioMedical Engineering at the University of British Columbia.",
+      desireeProfilePic
     ),
   ],
 };
