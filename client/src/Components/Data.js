@@ -1,4 +1,6 @@
-import ventilator from "./Product/Images/ventilator.png";
+import ventilator1 from "./Product/Images/ventilator2.jpeg";
+import ventilator2 from "./Product/Images/ventilator1.JPG";
+import ventilator3 from "./Product/Images/ventilator3.jpeg";
 
 import cbcLogo from "./News/Images/cbc.png";
 import torontoStarLogo from "./News/Images/toronto-star.svg";
@@ -12,7 +14,7 @@ import { TeamMember } from "./Team/TeamMember";
 
 export const HomeData = {
   homeParagraphText:
-    "Creating  innovative and unique solutions to bridge the gap of health inequality across the globe",
+    "Creating  innovative, unique, and cost-effective solutions to bridge the gap of health inequality across the globe.",
   aeolusCaption: "Breathe Easy.",
 };
 
@@ -27,14 +29,15 @@ export const ProductData = {
   productTitle: "Our Story",
   productText:
     "The COVID-19 pandemic revealed the stark difference between healthcare equipment and infrastructure in developed and developing countries. There are fewer than 2,000 functional ventilators in 41 African countries, according to the WHO. Health care is a human right and often times solutions are not one size fits all. Aeolus wishes to develop solutions for problems that may be overlooked.",
-  productImage: ventilator,
+  productImage: ventilator1,
   secondProductTitle: "The Aeolus Ventilator",
   secondProductText:
     "Aeolus is developing a low cost, portable and self-contained pneumatic ventilator system designed around the traditional bag valve mask that allows for hands-free patient ventilation in developing countries. ",
-  secondProductImage: ventilator,
+  secondProductImage: ventilator2,
   thirdProductTitle: "Cost Effective Care",
   thirdProductText:
     "The average ventilator costs between 25 to 50,000 dollars, a price point that is often unattainable for developing countries. Aeolus' mission is to create a system with all essential functionality at a fraction of the cost to provide quality care at a much lower price point.",
+  thirdProductImage: ventilator3,
 };
 
 export const StoryData = {
@@ -85,7 +88,7 @@ export const TeamData = {
   teamMembers: [
     new TeamMember(
       "Katie Stone",
-      "Katie Stone graduated from the Memorial Univeristy Electrical engineering program in 2021. Katie is passionate about innovation, software development and international development. ",
+      "Katie Stone graduated from the Memorial University Electrical engineering program in 2021. Katie is passionate about innovation, software development and international development. ",
       katieProfilePic
     ),
     new TeamMember(

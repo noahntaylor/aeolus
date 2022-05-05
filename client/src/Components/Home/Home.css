@@ -16,7 +16,7 @@
 .aeolusLogo {
   max-width: 90vw;
   max-height: 70vh;
-  filter: drop-shadow(1px 2px 4px);
+  filter: drop-shadow(1px 1px 2px);
 }
 
 .home-caption {
@@ -57,13 +57,13 @@
     max-height: 70vh;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {  
   .aeolusLogo {
-    max-height: 75vh;
+    max-height: 70vh;
   }
   .home-section {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0 8vw;
     height: 95vh;
   }
@@ -76,8 +76,13 @@
     color: #fff;
   }
   .home-descript {
-    background-color: #222222fa;
+    background-color: #222222;
     color: #fff;
     padding: 30px 35px;
+  }
+}
+@media screen and (min-width: 1600px) {  
+  .aeolusLogo {
+    max-height: 70vh;
   }
 }
