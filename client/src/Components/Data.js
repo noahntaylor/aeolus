@@ -10,7 +10,7 @@ import { TeamMember } from "./Team/TeamMember";
 
 export const HomeData = {
   homeParagraphText:
-    "Aeolus provides robust and one-of a kind solutions to global problems. Innovation, at a fair and global price. The health equality gap became even more apparent during hte pandemic and Aeolus is here to adress it.",
+    "Creating  innovative and unique solutions to bridge the gap of health inequality across the globe",
   aeolusCaption: "Breathe Easy.",
 };
 
@@ -22,32 +22,32 @@ export const NavData = {
 };
 
 export const ProductData = {
-  productTitle: "The Aeolus Ventilator",
+  productTitle: "Our Story",
   productText:
-    "Aeolus has developed a robust pneumatic and portable ventilator and cost effective ventilator. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided   to keep working on the project herself after graduation.",
+    "The COVID-19 pandemic revealed the stark difference between healthcare equipment and infrastructure in developed and developing countries. There are fewer than 2,000 functional ventilators in 41 African countries, according to the WHO. Health care is a human right and often times solutions are not one size fits all. Aeolus' wishes to develop solutions for problems that may be overlooked.",
   productImage: ventilator,
-  secondProductTitle: "More About Product...",
+  secondProductTitle: "The Aeolus Ventilator",
   secondProductText:
-    "Aeolus has developed a robust pneumatic and portable ventilator and cost effective ventilator. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided   to keep working on the project herself after graduation.",
+    "Aeolus is developing a low cost, portable and self-contained pneumatic ventilator system designed around the traditional bag valve mask that allows for hands-free patient ventilation in developing countries. ",
   secondProductImage: ventilator,
-  thirdProductTitle: "Last About Product...",
+  thirdProductTitle: "Cost Effective Care",
   thirdProductText:
-    "Aeolus has developed a robust pneumatic and portable ventilator and cost effective ventilator. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided   to keep working on the project herself after graduation.",
-  thirdProductImage: ventilator,
+    "The average ventilator costs between 25 to 50,000 dollars, a price point that is often unattainable for developing countries. The Aeolus systems plans to create a systems with all essential functionality at a fraction of the cost to provide a much more cost effective way to provide quality care.",
+
 };
 
 export const StoryData = {
   firstStoryHeading: "Our Story",
   firstStoryParagraph:
-    "Aeolus is currently completing the Genesis Evolution Plus program with the Genesis center for Entrepreneurship. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided to keep working on the project herself after graduation. ",
+    "The Aeolus story started in the Team's final year of electrical engineering at Memorial University. We started our senior capstone design project just as the Covid-19 pandemic began. All the headlines focuses on the need for ventilators in the the fight of the virus and there may not be enough in North America. However, the situation in developing countries was much worse.",
   secondStoryHeading: "A Global Shortage",
   secondStoryParagraph:
-    "Aeolus has developed a robust and portable ventilator for use in developing countries. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. She said the project started as a capstone design project for her degree, along with work from partners Desiree Van Heerden and Rachel Tobin, but Stone decided to keep working on the project herself after graduation.",
+    "South Sudan, a nation of 11 million, has four ventilators. The Central African Republic has three ventilators for its five million people. In Liberia, which is similar in size, there are six working machines — and one of them sits behind the gates of the United States Embassy. Ten countries in Africa have none at all. It is clear that modern day ventilators do not fit into all health care systems across the globe. ",
 };
 
 export const NewsData = {
   newsOpenerText:
-    "Aeolus has developed a robust and portable ventilator for use in developing countries. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators. Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators.",
+    "Katie Stone continued with the project post graduation and won the Genesis Centre's Pitch and Pick competition. Aeolus is currently a Bounce partner companies and is excited to be apart of the local MedTech Start-up space in Newfoundland.",
   newHeading: "News",
   articles: [
     {
@@ -84,7 +84,7 @@ export const TeamData = {
   teamMembers: [
     new TeamMember(
       "Katie Stone",
-      "Katie Stone, 22, won the Genesis Centre's Pitch and Pick competition with the Aeolus Portable Ventilation System, a prototype that will hopefully provide a cost-effective alternative to traditional COVID-19 ventilators.",
+      "Katie Stone graduated from the Memorial Univeristy Electrical engineering program in 2021. Katie is passionate about innovation, software development and international development. ",
       katieProfilePic
     ),
     new TeamMember(
